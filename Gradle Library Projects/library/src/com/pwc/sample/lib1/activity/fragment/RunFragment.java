@@ -1,4 +1,4 @@
-package com.pwc.sample;
+package com.pwc.sample.lib1.activity.fragment;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -15,6 +15,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.pwc.sample.lib1.R;
+
+import com.pwc.sample.lib1.dao.RunManager;
+import com.pwc.sample.lib1.loader.LastLocationLoader;
+import com.pwc.sample.lib1.loader.RunLoader;
+import com.pwc.sample.lib1.receiver.LocationReceiver;
+import com.pwc.sample.model.Run;
 
 public class RunFragment extends Fragment {
     private static final String TAG = "RunFragment";

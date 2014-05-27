@@ -1,4 +1,6 @@
-package com.pwc.sample;
+package com.pwc.sample.lib1.receiver;
+
+import com.pwc.sample.lib1.dao.RunManager;
 
 import android.content.Context;
 import android.location.Location;

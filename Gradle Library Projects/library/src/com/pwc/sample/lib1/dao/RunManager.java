@@ -1,4 +1,4 @@
-package com.pwc.sample;
+package com.pwc.sample.lib1.dao;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -8,8 +8,10 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.util.Log;
 
-import com.bignerdranch.android.runtracker.RunDatabaseHelper.LocationCursor;
-import com.bignerdranch.android.runtracker.RunDatabaseHelper.RunCursor;
+import com.pwc.sample.lib1.dao.helper.RunDatabaseHelper;
+import com.pwc.sample.lib1.dao.helper.RunDatabaseHelper.LocationCursor;
+import com.pwc.sample.lib1.dao.helper.RunDatabaseHelper.RunCursor;
+import com.pwc.sample.model.Run;
 
 public class RunManager {
     private static final String TAG = "RunManager";
@@ -17,7 +19,7 @@ public class RunManager {
     private static final String PREFS_FILE = "runs";
     private static final String PREF_CURRENT_RUN_ID = "RunManager.currentRunId";
 
-    public static final String ACTION_LOCATION = "com.bignerdranch.android.runtracker.ACTION_LOCATION";
+    public static final String ACTION_LOCATION = "com.pwc.sample.lib1.ACTION_LOCATION";
     
     private static final String TEST_PROVIDER = "TEST_PROVIDER";
     

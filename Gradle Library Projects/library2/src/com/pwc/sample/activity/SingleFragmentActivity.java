@@ -1,4 +1,4 @@
-package com.pwc.sample;
+package com.pwc.sample.activity;
 
 
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.widget.FrameLayout;
+
+import com.pwc.sample.lib2.R;
 
 public abstract class SingleFragmentActivity extends FragmentActivity {
     protected static final String FRAGMENT_TAG = "SingleFragmentActivity.Fragment";

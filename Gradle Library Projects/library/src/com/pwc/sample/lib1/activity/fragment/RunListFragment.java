@@ -1,4 +1,4 @@
-package com.pwc.sample;
+package com.pwc.sample.lib1.activity.fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,10 +17,14 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.bignerdranch.android.runtracker.RunDatabaseHelper.RunCursor;
-import com.bignerdranch.android.runtracker.localbroadcast.ReceiverActivity;
-import com.bignerdranch.android.runtracker.localbroadcast.SenderActivity;
+import com.pwc.sample.lib1.R;
+
 import com.pwc.sample.lib1.activity.RunActivity;
+import com.pwc.sample.lib1.dao.RunManager;
+import com.pwc.sample.lib1.dao.helper.RunDatabaseHelper.RunCursor;
+import com.pwc.sample.loader.SQLiteCursorLoader;
+import com.pwc.sample.model.Run;
+
 
 public class RunListFragment extends ListFragment implements
 		LoaderCallbacks<Cursor> {
@@ -64,20 +68,11 @@ public class RunListFragment extends ListFragment implements
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.menu_item_new_run:
-			Intent i = new Intent(getActivity(), RunActivity.class);
-			startActivityForResult(i, REQUEST_NEW_RUN);
-			return true;
-		case R.id.menu_item_new_receiver:
-			Intent iR = new Intent(getActivity(), ReceiverActivity.class);
-			startActivityForResult(iR, REQUEST_NEW_RECEIVER);
-			return true;
-		case R.id.menu_item_new_sender:
-			Intent iS = new Intent(getActivity(), SenderActivity.class);
-			startActivityForResult(iS, REQUEST_NEW_SENDER);
-			return true;
-		default:
+		if (item.getItemId() == R.id.menu_item_new_run) {
+            Intent i = new Intent(getActivity(), RunActivity.class);
+            startActivityForResult(i, REQUEST_NEW_RUN);
+            return true;
+        }else{
 			return super.onOptionsItemSelected(item);
 		}
 	}

@@ -1,4 +1,4 @@
-package com.pwc.sample;
+package com.pwc.sample.lib1.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

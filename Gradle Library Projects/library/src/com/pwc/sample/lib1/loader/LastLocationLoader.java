@@ -1,9 +1,12 @@
-package com.pwc.sample;
+package com.pwc.sample.lib1.loader;
+
+import com.pwc.sample.lib1.dao.RunManager;
+import com.pwc.sample.loader.DataLoader;
 
 import android.content.Context;
 import android.location.Location;
 
-class LastLocationLoader extends DataLoader<Location> {
+public class LastLocationLoader extends DataLoader<Location> {
     private long mRunId;
     
     public LastLocationLoader(Context context, long runId) {

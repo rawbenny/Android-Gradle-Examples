@@ -1,6 +1,8 @@
-package com.pwc.sample;
+package com.pwc.sample.lib1.dao.helper;
 
 import java.util.Date;
+
+import com.pwc.sample.model.Run;
 
 import android.content.ContentValues;
 import android.content.Context;

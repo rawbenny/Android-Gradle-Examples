@@ -1,4 +1,4 @@
-package com.pwc.sample;
+package com.pwc.sample.loader;
 
 import android.content.Context;
 import android.database.Cursor;
